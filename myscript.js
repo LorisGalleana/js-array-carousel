@@ -27,10 +27,12 @@ for (let i = 0; i < imageArray.length; i++) {
 }
 
 const items = document.getElementsByClassName("carousel-image");
+const thumbnails = document.getElementsByClassName("thumb-image");
 
 let activeItem = 0;
 
 items[activeItem].classList.add("active");
+thumbnails[activeItem].classList.add("thumb-active");
 
 const next = document.querySelector(".next");
 const previous = document.querySelector(".previous");
@@ -39,18 +41,22 @@ next.addEventListener("click", function() {
     if (activeItem < imageArray.length - 1) {
         
         items[activeItem].classList.remove("active");
+        thumbnails[activeItem].classList.remove("thumb-active");
 
         activeItem++;
 
         items[activeItem].classList.add("active");
+        thumbnails[activeItem].classList.add("thumb-active");
 
     }
     else {
         items[activeItem].classList.remove("active");
+        thumbnails[activeItem].classList.remove("thumb-active");
 
         activeItem = 0;
 
         items[activeItem].classList.add("active");
+        thumbnails[activeItem].classList.add("thumb-active");
     }
        
     
@@ -61,18 +67,24 @@ previous.addEventListener("click", function() {
     if (activeItem > 0) {
         
         items[activeItem].classList.remove("active");
+        
+        thumbnails[activeItem].classList.remove("thumb-active");
 
         activeItem--;
 
         items[activeItem].classList.add("active");
+        thumbnails[activeItem].classList.add("thumb-active");
     }
     else {
 
         items[activeItem].classList.remove("active");
+        
+        thumbnails[activeItem].classList.remove("thumb-active");
 
         activeItem = imageArray.length -1;
 
         items[activeItem].classList.add("active");
+        thumbnails[activeItem].classList.add("thumb-active");
     }
     
     
