@@ -9,7 +9,7 @@
     width: 100%;display: flex;
 }
 .carousel-container {
-    width: 80%;
+    width: 89%;
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -52,15 +52,17 @@
 
 .thumbnails-container {
     background-color: black;
-    width: 20%;
+    width: 11%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 .thumb-image {
-    height: calc(100%/5 - 5px);
-    
     overflow: hidden;
 }
 .thumb-image img {
-    object-fit: contain;
-    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
