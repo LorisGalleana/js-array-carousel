@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.page-container {
+    width: 100%;
+}
+.carousel-container {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.arrows {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    font-size: 48px;
+    color: white;
+    padding: 0 1%;
+    
+}
+.previous, .next {
+    filter: opacity(0.2);
+}
+.previous:hover, .next:hover {
+    filter: none;
+    cursor: pointer;
+}
+
+.carousel-container img{
+    width: 100%;
+    
+}
+.carousel-image {
+    display: none;
+}
+.active {
+    display: block;
+}
