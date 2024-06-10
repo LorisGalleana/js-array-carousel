@@ -1,6 +1,6 @@
 const imageArray = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 const carouselContainer = document.querySelector(".carousel-container");
-
+const thumbContainer = document.querySelector(".thumbnails-container");
 
 
 
@@ -14,8 +14,16 @@ for (let i = 0; i < imageArray.length; i++) {
                 <img src="${carouselImg}">
             </div>
     `
-
+    let thumbContent = 
+    `
+            <div class="thumb-image">
+                <img src="${carouselImg}">
+            </div>
+    `
     carouselContainer.innerHTML += carouselContent;
+    thumbContainer.innerHTML += thumbContent;
+
+    
 }
 
 const items = document.getElementsByClassName("carousel-image");

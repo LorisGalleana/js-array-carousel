@@ -6,7 +6,7 @@
 
 
 .page-container {
-    width: 100%;
+    width: 100%;display: flex;
 }
 .carousel-container {
     width: 80%;
@@ -16,6 +16,7 @@
     align-items: center;
     overflow: hidden;
     position: relative;
+    background-color: black
 }
 .arrows {
     display: flex;
@@ -38,6 +39,8 @@
 
 .carousel-container img{
     width: 100%;
+    transform: scale(.7);
+    
     
 }
 .carousel-image {
@@ -45,4 +48,19 @@
 }
 .active {
     display: block;
+}
+
+.thumbnails-container {
+    background-color: black;
+    width: 20%;
+    height: 100vh;
+}
+.thumb-image {
+    height: calc(100%/5 - 5px);
+    
+    overflow: hidden;
+}
+.thumb-image img {
+    object-fit: contain;
+    width: 100%;
 }
